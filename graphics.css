@@ -23,12 +23,16 @@ h1 {
   transform: translateX(-50%);
   width: 98%;
   height: 70%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 #text {
   position: fixed;
   bottom: 15%;
   left: 0;
+  font-family: courier;
+  font-size: 0.5em;
 }
 
 input {
@@ -45,12 +49,18 @@ input {
   position: fixed;
   bottom: 5%;
   left: 5%;
+  width: 80%;
+  display: inline-block;
 }
 
 button{
-  margin-left: 10px;
-  margin-top: 15px;
-  height: 22px;
-  font-size: 14px;
+  margin-left: 2%;
+  margin-top: 2%;
+  height: 4%;
+  font-size: 0.5em;
+  border: 1px solid red;
+  background-color: black;
+  color: white;
+  border-radius: 20%;
 }
 
