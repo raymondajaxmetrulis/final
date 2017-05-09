@@ -32,7 +32,8 @@ h1 {
   bottom: 15%;
   left: 0;
   font-family: courier;
-  font-size: 0.5em;
+  font-size: 0.7em;
+  text-align: left;
 }
 
 input {
@@ -41,7 +42,7 @@ input {
   position: fixed;
   bottom: 5%;
   left: 0;
-  font-size: 1em;
+  font-size: 0.5em;
   margin-top: 1%;
 }
 

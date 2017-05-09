@@ -4,7 +4,6 @@ var buttonBox = document.getElementById('buttonBox');
 var input = document.getElementById('input');
 var reality;
 
-
 input.onkeypress = function(start) {
   if (start.key == "Enter" || start.keyCode == 13) {
     reality = input.value;
@@ -13,7 +12,6 @@ input.onkeypress = function(start) {
     $("h1").fadeIn(3000);
   }
 };
-
 
 var altText = function(words) {
   text.innerHTML = words.replace("The void", reality);
@@ -35,7 +33,6 @@ var lvlUp = function(s) {
   altText(s.text)
   altConvictions(s.buttons)
 };
-
 
 altReality = {}
 var altReality = {
@@ -65,7 +62,7 @@ var altReality = {
   three: {
     image: "images/vision.jpg",
     text: "Your eyes adjust to the developing contrast. A flat shadowy landscape expands for miles. The light is warm, almost hot.",
-    buttons: [["Look around", "lvlUp(altReality.four)"], ["Reminisce about simpler times", "lvlUp(altReality.threeB)"]]
+    buttons: [["Look around", "lvlUp(altReality.four)"],["Reminisce about simpler times", "lvlUp(altReality.threeB)"]]
   },
 
   threeB: {
@@ -87,12 +84,37 @@ var altReality = {
   },
 
   five: {
-    image: "",
-    text: "",
-    buttons: [["continue", "lvlUp(altReality.zero)"]]
+    image: "images/path.jpg",
+    text: "You walk for a few minutes on a trail that is beaten by your proceeding steps. The pangs of hunger and exhaustion and loneliness begin to set in. You see a strange man a few yards away.",
+    buttons: [["Approach the man", "lvlUp(altReality.seven)"],["Ignore the man and keep walking", "lvlUp(altReality.six)"],["Address hunger", "lvlUp(altReality.sixB)"]]
   },
 
-    zero: {
+  six: {
+    image: "images/path.jpg",
+    text: "You pass by and shout, 'Smell ya later, dingus.' The man watches you saunter away.",
+    buttons: [["Continue", "lvlUp(altReality.zero)"]]
+  },
+
+  sixB: {
+    image: "images/dirt.jpg",
+    text: "There is nothing edible around. You grab a handful of dirt and shove it in your mouth. Surprisingly, the dirt is not very satisfying.",
+    buttons: [["Approach the man", "lvlUp(altReality.seven)"],["Ignore the man and keep walking", "lvlUp(altReality.six)"]]
+  },
+
+  seven: {
+    image: "images/twenty.jpg",
+    text: "The man actually looks more like a boy. He is wearing thick glasses and a pocket protector. His right hand perseverates over a 20 sided die. He introduces himself as 20 Sided Guy, similar to Two-Face from Batman, except he has an incredibly difficult time making decisions.",
+    buttons: [["Introduce yourself civily", "lvlUp(altReality.zero)"],["Ignore the man and keep walking", "lvlUp(altReality.six)"],["No mercy", "lvlUp(altReality.sevenB)"]]
+  },
+
+  sevenB: {
+    image: "images/nomercy.jpg",
+    text: "Before even saying hello, you annihilate 20 Sided Guy with a decisive german suplex. Nice!",
+    buttons: [["Continue", "lvlUp(altReality.zero)"]]
+  },
+
+  zero: {
+    image: "images/dark.jpg",
     text: "You are so bored that you succumb to madness. Game Over.",
   }
 };
