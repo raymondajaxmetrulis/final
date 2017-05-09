@@ -65,3 +65,17 @@ button{
   border-radius: 20%;
 }
 
+@media (max-width: 1024px) 
+and (max-height: 700px) {
+  #images {
+    height: 50%;
+  }
+}
+
+@media (max-width: 400px) 
+and (max-height: 400px) {
+  #text {
+    font-size: 10px;
+    bottom: 25%;
+  }
+}
